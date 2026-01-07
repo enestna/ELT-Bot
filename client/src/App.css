@@ -1,0 +1,198 @@
+/* App.css - Tuna Chat Final Tasarımı */
+
+/* Genel sayfa yerleşimi - Ekranı ortalar */
+body { 
+  margin: 0; 
+  background-color: #0f172a; 
+  color: white; 
+  font-family: 'Inter', sans-serif; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  height: 100vh; 
+}
+
+/* Yan yana duran iki ana panelin kapsayıcısı */
+.main-wrapper { 
+  display: flex; 
+  width: 95vw; 
+  max-width: 1100px; 
+  height: 85vh; 
+  gap: 20px; 
+}
+
+/* SOL PANEL: Sohbet Geçmişi */
+.sidebar { 
+  flex: 1; 
+  background: #1e293b; 
+  border-radius: 20px; 
+  border: 1px solid #334155; 
+  padding: 20px; 
+  display: flex; 
+  flex-direction: column; 
+}
+
+/* Sidebar Başlık ve Buton Alanı */
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #334155;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+.sidebar h2 { 
+  color: #3b82f6; 
+  font-size: 1.1rem; 
+  margin: 0;
+}
+
+/* Yeni Sohbet (+) Butonu */
+.new-chat-btn {
+  background: #3b82f6;
+  color: white;
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s;
+}
+
+.new-chat-btn:hover {
+  background: #2563eb;
+  transform: rotate(90deg);
+}
+
+.history-list { 
+  overflow-y: auto; 
+  flex: 1; 
+}
+
+/* Geçmişteki her bir kutucuk */
+.history-item { 
+  background: #0f172a; 
+  padding: 12px; 
+  border-radius: 10px; 
+  margin-bottom: 10px; 
+  cursor: pointer; 
+  border: 1px solid transparent; 
+  transition: 0.2s; 
+}
+
+.history-item:hover { 
+  border-color: #3b82f6; 
+  background: #1e293b; 
+}
+
+.hist-q { 
+  margin: 0; 
+  font-size: 0.8rem; 
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+  white-space: nowrap; 
+}
+
+.hist-date { 
+  font-size: 0.65rem; 
+  color: #64748b; 
+}
+
+/* SAĞ PANEL: Aktif Sohbet Alanı */
+.app-container { 
+  flex: 2.5; 
+  background: #1e293b; 
+  border-radius: 20px; 
+  display: flex; 
+  flex-direction: column; 
+  overflow: hidden; 
+  border: 1px solid #334155; 
+}
+
+.header { 
+  background: #2563eb; 
+  padding: 15px; 
+  text-align: center; 
+}
+
+.header h1 { 
+  margin: 0; 
+  font-size: 1.3rem; 
+}
+
+.chat-window { 
+  flex: 1; 
+  padding: 20px; 
+  overflow-y: auto; 
+  display: flex; 
+  flex-direction: column; 
+  gap: 12px; 
+}
+
+/* Hoşgeldin mesajı stili */
+.welcome-msg {
+  text-align: center;
+  color: #64748b;
+  margin-top: 50px;
+  font-style: italic;
+}
+
+/* Mesaj Baloncukları */
+.message { 
+  max-width: 80%; 
+  padding: 12px; 
+  border-radius: 15px; 
+  font-size: 0.9rem; 
+  line-height: 1.4;
+}
+
+.message.user { 
+  align-self: flex-end; 
+  background: #3b82f6; 
+  border-bottom-right-radius: 2px; 
+}
+
+.message.bot { 
+  align-self: flex-start; 
+  background: #334155; 
+  border-bottom-left-radius: 2px; 
+}
+
+/* Alt taraftaki giriş alanı */
+.input-area { 
+  padding: 15px; 
+  display: flex; 
+  gap: 10px; 
+  background: #1e293b; 
+  border-top: 1px solid #334155; 
+}
+
+input { 
+  flex: 1; 
+  padding: 10px 18px; 
+  border-radius: 25px; 
+  border: 1px solid #475569; 
+  background: #0f172a; 
+  color: white; 
+  outline: none; 
+}
+
+button.send-btn { 
+  padding: 0 25px; 
+  border-radius: 25px; 
+  background: #3b82f6; 
+  color: white; 
+  border: none; 
+  font-weight: bold; 
+  cursor: pointer; 
+}
+
+button.send-btn:hover {
+  background: #2563eb;
+}
